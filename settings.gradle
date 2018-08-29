@@ -1,0 +1,4 @@
+rootProject.name = 'hometest'
+
+include 'api'
+include 'rest'

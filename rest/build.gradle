@@ -1,5 +1,9 @@
 apply plugin: 'org.springframework.boot'
 
 dependencies {
+
+    compile(":api")
+    compile(":domain")
+
     compile("org.springframework.boot:spring-boot-starter-web:1.5.15.RELEASE")
 }

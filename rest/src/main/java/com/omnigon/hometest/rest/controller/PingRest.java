@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class PingRest {
 
     @RequestMapping("/ping")
-    public String ping() {
-        return "OK!";
+    public RestResponse ping() {
+        return RestResponse.ok();
     }
 
 }

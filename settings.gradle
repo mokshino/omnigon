@@ -1,4 +1,6 @@
 rootProject.name = 'hometest'
 
 include 'api'
+include 'domain'
 include 'rest'
+include 'service'

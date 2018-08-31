@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 /**
  * String rest.
  */
@@ -26,7 +28,7 @@ public class StringRest {
      * @return the rest response
      */
     @PostMapping("/sort")
-    public RestResponse<StringResponse> sort(StringRequest request) {
+    public RestResponse<List<StringResponse>> sort(StringRequest request) {
         return RestResponse.ok(stringService.sort(request));
     }
 }

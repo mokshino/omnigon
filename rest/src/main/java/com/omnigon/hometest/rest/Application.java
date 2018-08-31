@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * Spring Boot Application.
  */
-@SpringBootApplication(scanBasePackages = "hometest")
+@SpringBootApplication(scanBasePackages = "com.omnigon.hometest")
 public class Application {
 
     /**

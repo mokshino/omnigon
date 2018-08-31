@@ -1,6 +1,9 @@
 dependencies {
     compile project(":api")
-    compile project(":domain")
 
     compile('org.springframework:spring-context:4.3.18.RELEASE')
+
+    testCompile 'junit:junit:4.12'
+
+
 }

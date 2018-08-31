@@ -5,6 +5,8 @@ import com.omnigon.hometest.domain.StringRequest;
 import com.omnigon.hometest.domain.StringResponse;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * String service implementation.
  *
@@ -13,7 +15,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class StringServiceImpl implements StringService {
     @Override
-    public StringResponse sort(StringRequest request) {
+    public List<StringResponse> sort(StringRequest request) {
         return null;
     }
 }

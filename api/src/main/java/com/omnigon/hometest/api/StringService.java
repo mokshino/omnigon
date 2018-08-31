@@ -3,6 +3,8 @@ package com.omnigon.hometest.api;
 import com.omnigon.hometest.domain.StringRequest;
 import com.omnigon.hometest.domain.StringResponse;
 
+import java.util.List;
+
 /**
  * String service.
  *
@@ -13,7 +15,7 @@ public interface StringService {
      * Sort string response.
      *
      * @param request the strings request
-     * @return the string response
+     * @return the list
      */
-    StringResponse sort(StringRequest request);
+    List<StringResponse> sort(StringRequest request);
 }

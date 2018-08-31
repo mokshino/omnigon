@@ -14,6 +14,23 @@ public class StringResponse {
     private Integer longestWord;
 
     /**
+     * Instantiates a new String response.
+     */
+    public StringResponse() {
+    }
+
+    /**
+     * Instantiates a new String response.
+     *
+     * @param string      the string
+     * @param longestWord the longest word
+     */
+    public StringResponse(String string, Integer longestWord) {
+        this.string = string;
+        this.longestWord = longestWord;
+    }
+
+    /**
      * Gets string.
      *
      * @return the string

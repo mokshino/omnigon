@@ -14,11 +14,7 @@ allprojects {
     group = 'com.omnigon.hometest'
 }
 
-project(':api') {
-    apply plugin: 'java'
-}
-
-configure (subprojects - project(':api')) {
+subprojects  {
 
     apply plugin: 'java'
 

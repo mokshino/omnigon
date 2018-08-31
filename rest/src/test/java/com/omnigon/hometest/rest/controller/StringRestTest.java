@@ -3,6 +3,7 @@ package com.omnigon.hometest.rest.controller;
 import com.omnigon.hometest.api.StringService;
 import com.omnigon.hometest.domain.StringRequest;
 import com.omnigon.hometest.domain.StringResponse;
+import com.omnigon.hometest.domain.StringResponseItem;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +38,7 @@ public class StringRestTest {
             "]}";
 
     private static final String TEST_RES = "{\"status\":{\"code\":\"OK\",\"message\":null}," +
-            "\"result\":[{\"string\":\"test\",\"longestWord\":10}]}";
+            "\"content\":{\"result\":[{\"string\":\"test\",\"longestWord\":10}]}}";
 
     @MockBean
     private StringService stringService;
@@ -48,7 +49,7 @@ public class StringRestTest {
     @Test
     public void sort() throws Exception {
         given(stringService.sort(any(StringRequest.class)))
-                .willReturn(Collections.singletonList(new StringResponse("test", 10)));
+                .willReturn(new StringResponse(Collections.singletonList(new StringResponseItem("test", 10))));
 
         mvc.perform(post("/strings/sort")
                 .accept(MediaType.APPLICATION_JSON)

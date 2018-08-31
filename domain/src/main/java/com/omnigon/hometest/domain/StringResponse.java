@@ -3,6 +3,8 @@ package com.omnigon.hometest.domain;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import java.util.List;
+
 /**
  * String response.
  *
@@ -10,8 +12,10 @@ import org.apache.commons.lang3.builder.ToStringStyle;
  */
 public class StringResponse {
 
-    private String string;
-    private Integer longestWord;
+    /**
+     * The Result.
+     */
+    private List<StringResponseItem> result;
 
     /**
      * Instantiates a new String response.
@@ -22,48 +26,28 @@ public class StringResponse {
     /**
      * Instantiates a new String response.
      *
-     * @param string      the string
-     * @param longestWord the longest word
+     * @param result the result
      */
-    public StringResponse(String string, Integer longestWord) {
-        this.string = string;
-        this.longestWord = longestWord;
+    public StringResponse(List<StringResponseItem> result) {
+        this.result = result;
     }
 
     /**
-     * Gets string.
+     * Gets result.
      *
-     * @return the string
+     * @return the result
      */
-    public String getString() {
-        return string;
+    public List<StringResponseItem> getResult() {
+        return result;
     }
 
     /**
-     * Sets string.
+     * Sets result.
      *
-     * @param string the string
+     * @param result the result
      */
-    public void setString(String string) {
-        this.string = string;
-    }
-
-    /**
-     * Gets longest word.
-     *
-     * @return the longest word
-     */
-    public Integer getLongestWord() {
-        return longestWord;
-    }
-
-    /**
-     * Sets longest word.
-     *
-     * @param longestWord the longest word
-     */
-    public void setLongestWord(Integer longestWord) {
-        this.longestWord = longestWord;
+    public void setResult(List<StringResponseItem> result) {
+        this.result = result;
     }
 
     @Override

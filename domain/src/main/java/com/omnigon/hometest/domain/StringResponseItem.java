@@ -1,0 +1,73 @@
+package com.omnigon.hometest.domain;
+
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
+/**
+ * String response item.
+ *
+ * @author Anton Mokshyn.
+ */
+public class StringResponseItem {
+
+    private String string;
+    private Integer longestWord;
+
+    /**
+     * Instantiates a new String response.
+     */
+    public StringResponseItem() {
+    }
+
+    /**
+     * Instantiates a new String response.
+     *
+     * @param string      the string
+     * @param longestWord the longest word
+     */
+    public StringResponseItem(String string, Integer longestWord) {
+        this.string = string;
+        this.longestWord = longestWord;
+    }
+
+    /**
+     * Gets string.
+     *
+     * @return the string
+     */
+    public String getString() {
+        return string;
+    }
+
+    /**
+     * Sets string.
+     *
+     * @param string the string
+     */
+    public void setString(String string) {
+        this.string = string;
+    }
+
+    /**
+     * Gets longest word.
+     *
+     * @return the longest word
+     */
+    public Integer getLongestWord() {
+        return longestWord;
+    }
+
+    /**
+     * Sets longest word.
+     *
+     * @param longestWord the longest word
+     */
+    public void setLongestWord(Integer longestWord) {
+        this.longestWord = longestWord;
+    }
+
+    @Override
+    public String toString() {
+        return ToStringBuilder.reflectionToString(this, ToStringStyle.SIMPLE_STYLE, false);
+    }
+}

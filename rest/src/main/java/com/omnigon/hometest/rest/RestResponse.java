@@ -9,17 +9,17 @@ package com.omnigon.hometest.rest;
 public class RestResponse<T> {
 
     private final RestResponseStatus status;
-    private final T result;
+    private final T content;
 
     /**
      * Instantiates a new Rest response.
      *
      * @param status the status
-     * @param result the result
+     * @param content the content
      */
-    public RestResponse(RestResponseStatus status, T result) {
+    public RestResponse(RestResponseStatus status, T content) {
         this.status = status;
-        this.result = result;
+        this.content = content;
     }
 
     /**
@@ -29,7 +29,7 @@ public class RestResponse<T> {
      */
     public RestResponse(RestResponseStatus status) {
         this.status = status;
-        this.result = null;
+        this.content = null;
     }
 
     /**
@@ -42,12 +42,12 @@ public class RestResponse<T> {
     }
 
     /**
-     * Gets result.
+     * Gets content.
      *
-     * @return the result
+     * @return the content
      */
-    public T getResult() {
-        return result;
+    public T getContent() {
+        return content;
     }
 
     /**

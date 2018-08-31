@@ -14,7 +14,7 @@ allprojects {
     group = 'com.omnigon.hometest'
 }
 
-subprojects  {
+subprojects {
 
     apply plugin: 'java'
 

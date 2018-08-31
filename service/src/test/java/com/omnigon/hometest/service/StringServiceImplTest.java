@@ -7,6 +7,7 @@ import com.omnigon.hometest.domain.StringResponseItem;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -49,5 +50,35 @@ public class StringServiceImplTest {
 
         assertEquals("Hear it all the time, come back rewind", result.get(4).getString());
         assertEquals(6, result.get(4).getLongestWord().intValue());
+    }
+
+    @Test
+    public void testSortEmpty() {
+        StringRequest request = new StringRequest();
+
+        request.setStrings(Collections.emptyList());
+
+        StringResponse response = stringService.sort(request);
+
+        List<StringResponseItem> result = response.getResult();
+
+        assertEquals(0, result.size());
+    }
+
+    @Test
+    public void testSortEmptyString() {
+        StringRequest request = new StringRequest();
+
+        request.setStrings(Collections.singletonList(""));
+
+        StringResponse response = stringService.sort(request);
+
+        List<StringResponseItem> result = response.getResult();
+
+        assertEquals(1, result.size());
+
+        assertEquals("", result.get(0).getString());
+        assertEquals(0, result.get(0).getLongestWord().intValue());
+
     }
 }

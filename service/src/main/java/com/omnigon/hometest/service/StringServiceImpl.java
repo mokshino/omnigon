@@ -10,6 +10,9 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import static org.springframework.util.Assert.notNull;
 
 /**
  * String service implementation.
@@ -23,6 +26,8 @@ public class StringServiceImpl implements StringService {
 
     @Override
     public StringResponse sort(StringRequest request) {
+
+        notNull(request.getStrings(), "'strings' cannot be null");
 
         List<StringResponseItem> result = request.getStrings().stream()
                 .map(string -> new StringResponseItem(string,

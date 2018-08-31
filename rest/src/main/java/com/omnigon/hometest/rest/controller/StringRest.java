@@ -7,6 +7,7 @@ import com.omnigon.hometest.domain.StringResponseItem;
 import com.omnigon.hometest.rest.RestResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,7 +30,7 @@ public class StringRest {
      * @return the rest response
      */
     @PostMapping("/sort")
-    public RestResponse<StringResponse> sort(StringRequest request) {
+    public RestResponse<StringResponse> sort(@RequestBody StringRequest request) {
         return RestResponse.ok(stringService.sort(request));
     }
 }

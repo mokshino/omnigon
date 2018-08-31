@@ -14,7 +14,7 @@ public class RestResponse<T> {
     /**
      * Instantiates a new Rest response.
      *
-     * @param status the status
+     * @param status  the status
      * @param content the content
      */
     public RestResponse(RestResponseStatus status, T content) {
